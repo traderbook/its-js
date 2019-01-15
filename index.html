@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style rel="stylesheet">
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+
 </head>
 <body>
 <!--<button>+</button>-->
 <!--<p>J'ai cliqué <span>0</span> fois</p>-->
+
+<div></div>
 
 <script type="application/javascript">
     // var nbClick = 0
@@ -18,6 +32,10 @@
     //
     // // document.querySelector('button').onclick = eventClick
     // document.querySelector('button').addEventListener('click', eventClick)
+
+    document.querySelector('div').addEventListener('dblclick', function () {
+        document.querySelector('div').classList.toggle('red')
+    })
 </script>
 </body>
 </html>
