@@ -33,9 +33,13 @@
     // // document.querySelector('button').onclick = eventClick
     // document.querySelector('button').addEventListener('click', eventClick)
 
-    document.querySelector('div').addEventListener('dblclick', function () {
-        document.querySelector('div').classList.toggle('red')
-    })
+    var div = document.querySelector('div')
+
+    var dblClickToggle = function () {
+        div.classList.toggle('red')
+    }
+
+    div.addEventListener('dblclick', dblClickToggle)
 </script>
 </body>
 </html>
