@@ -5,9 +5,16 @@
     <title>Title</title>
     <style rel="stylesheet">
         div {
-            width: 100px;
-            height: 100px;
-            background-color: green;
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: green;*/
+
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         .red {
@@ -33,15 +40,35 @@
     // // document.querySelector('button').onclick = eventClick
     // document.querySelector('button').addEventListener('click', eventClick)
 
+    // var div = document.querySelector('div')
+    //
+    // var dblClickToggle = function () {
+    //     div.classList.toggle('red')
+    // }
+    //
+    // // div.addEventListener('dblclick', dblClickToggle)
+    //
+    // // setInterval(dblClickToggle, 2000)
+
     var div = document.querySelector('div')
 
-    var dblClickToggle = function () {
-        div.classList.toggle('red')
-    }
+    document.addEventListener('keydown', function (event) {
+        if (event.key == 'ArrowRight') {
+            div.style.left = (div.offsetLeft + 1) + 'px'
+        }
 
-    // div.addEventListener('dblclick', dblClickToggle)
+        if (event.key == 'ArrowDown') {
+            div.style.top = (div.offsetTop + 1) + 'px'
+        }
 
-    setInterval(dblClickToggle, 2000)
+        if (event.key == 'ArrowLeft') {
+            div.style.left = (div.offsetLeft - 1) + 'px'
+        }
+
+        if (event.key == 'ArrowUp') {
+            div.style.top = (div.offsetTop - 1) + 'px'
+        }
+    })
 
 </script>
 </body>
